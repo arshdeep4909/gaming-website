@@ -10,7 +10,7 @@ const date = new Date();
 const getCurrentMonth = () => {
     const currentMonth = date.getMonth() + 1;
     if (currentMonth < 10) {
-        return `0{currentMonth}`;
+        return `0${currentMonth}`;
     } else {
         return currentMonth;
     }
@@ -20,7 +20,7 @@ const getCurrentMonth = () => {
 const getCurrentDay = () => {
     const currentDay = date.getDate();
     if (currentDay < 10) {
-        return `0{currentDay}`;
+        return `0${currentDay}`;
     } else {
         return currentDay;
     }
@@ -37,7 +37,7 @@ const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 //relevant games
-const relevantGames = `games?key=${process.env.REACT_APP_API_KEY}&dates=${lastYear},${currentYear}&ordering=-rating`;
+const relevantGames = `games?key=${process.env.REACT_APP_API_KEY}&dates=${lastYear},${currentDate}&ordering=-rating`;
 
 //completet URL's
 
